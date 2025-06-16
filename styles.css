@@ -1,0 +1,160 @@
+/* manipulate style or position from top to down/ big to small */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+main,
+footer {
+    /* content can be width max only 800px no more than that */
+    max-width: 800px;
+    /* width will be long 100% of the page until hit the criteria of max-width */
+    width: 100%;
+    /* margin vertical 0 and auto horizontal will make content to be center when hit the criteria of max-width there will be margin when content no longer grow anymore */
+    margin: 0 auto;
+    /* push content far from inside container 2rem */
+    padding: 2rem;
+}
+/* manipulate position for each in big container */
+header {
+    display: flex;
+    /* set item in another axis to be center in this case core axis is horizontal then another axis is vertical */
+    align-items: center;
+    /* core axis item */
+    justify-content: space-between;
+    /* space between each item or container */
+    gap: 1rem;
+}
+
+/* sub-container manipulation*/
+nav {
+    /* these 2 first properties is for make item to be align in the same line */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* select tags underneath the tag */
+nav i {
+    font-size: 1.3rem;
+}
+
+/* select multiple tags to be flexible display*/
+main,
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* the children of flexible display(in this case each section is children of flexible display) going to have space between them 4rem*/
+main {
+    gap: 4rem;
+}
+
+/* element of each children in section have space between them 1rem */
+section {
+    gap: 1rem;
+}
+
+/* create tiny space between title and intro text */
+.intro-header p {
+    padding-top: 0.25rem;
+}
+
+.intro-description {
+    /* at default max witdh is auto so i spread all the to the page */
+    /* if we reduce max-witdh it will sit only where it can */
+    max-width: 500px;
+    /* if we don't put margin to the element like header, main, footer above it'll detault to position self to the left */
+}
+
+/* underneath the intro-description we have links-container */
+/* now it snug against another, we're going to spread them out */
+.links-container {
+    display: flex;
+    /* vertically for this one */
+    align-items: center;
+    /* for isolate them */
+    gap: 1rem;
+    /* isolate between a little bit more */
+    /* 1rem verical 0horizontal */
+    padding: 1rem 0;
+}
+
+.link-arrow {
+    color: var(--color-link);
+    /* rotate reverse clock walk 45deg */
+    transform: rotate(-45deg);
+}
+
+/* positioning color game div */
+.color-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* separate space each card with gap */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* separate space for info and image in card(this container have 2 childs */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-links {
+    display: flex;
+    /* set item to be align in vertical */
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    /* all will separate links to above content slightly significantly */
+}
+
+.tech-list {
+    /* make content in tect-list in horizontal form */
+    display: flex;
+    /* make them center in vertically */
+    align-items: center;
+    gap: 0.5rem;
+    /* in case where our row overflow the screen it gonna be wrap down to next line */
+    flex-wrap: wrap;
+    /* add space between item and border in top and bottom */
+    padding: 0.25rem 0;
+}
+
+/* make space between each tech list */
+.tech-list div {
+    /* vertical & horizontal */
+    padding: 0.1rem 0.5rem;
+    /* add a little round corner to it */
+    border-radius: var(--border-radius-small);
+}
+
+.tech-list p {
+    /* make font-size in tech-list smaller than tech-list div */
+    font-size: 0.9rem;
+}
+
+/* when size of screen go to 640px styles in media query will overwrite previous styles */
+@media (min-width: 640px) {
+   .project-card {
+    /* it will make info stand in the left and image on the right */
+    flex-direction: row;
+   } 
+
+   .project-card .img-div {
+    /* set width of .img-div container can be max width only 30% of parent container (in this case project-card*/
+    /* it can be grow but as soon as they are long 30% of parent it stop growing */
+    /* because header,main,footer set max-width to 800px it can be only 30% of 800px */
+    max-width: 30%;
+   }
+}

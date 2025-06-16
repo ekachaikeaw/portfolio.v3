@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekachaikeaw portolio-v2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fanta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <a href="/">Eka K</a>
+        <nav>
+            <a href="https://www.linkedin.com/in/ekachai-keawman/">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/ekachaikeaw">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="intro-header">
+                <h1>Halo! I'm Pop...</h1>
+                <p>Software Developer</p>
+            </div>
+            <h5 class="intro-description">
+                A mass communicator by qualification, and software developer by trade. Based in Thailand, I love to
+                walk, play video game, and build out all sorts of fun and useful internet applications!
+            </h5>
+            <div class="links-container">
+                <i class="fa-solid link-arrow fa-arrow-right"></i>
+                <a href="mailto:ekachai.keawman@gmail.com"></i> Email me</a>
+                <a target="_blank" href="https://www.linkedin.com/in/ekachai-keawman/">
+                    LinkedIn
+                </a>
+                <a target="_blank" href="https://github.com/ekachaikeaw">
+                    GitHub
+                </a>
+            </div>
+            <div id="play-game">
+                <button onclick="playGame()">Play game!!!</button>
+            </div>
+            <div style="display: none;" class="color-div">
+                <h4>Pick a color</h4>
+                <p style="display: none;">Great... now it's ruined</p>
+                <input type="color" id="color-picker" onchange="changeColor()" value="#0084ff" />
+                <button style="display: none;" onclick="resetColor()">Reset</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Technologies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>ReactJS, NodeJS & ExpressJS</td>
+                    </tr>
+                    <tr>
+                        <td>Go</td>
+                        <td>Fiber | Gin</td>
+                    </tr>
+                    <tr>
+                        <td>Web</td>
+                        <td>TailwindCSS | FantaCSS | Firebase | PostgreSQL | Git | Docker </td>
+                    </tr>
+                    <tr>
+                        <td>Design</td>
+                        <td>Figma</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Latest Projects</h2>
+            <div class="cards-grid">
+                <div class="project-card">
+                    <div>
+                        <p>June 2023</p>
+                        <h4>Caffeind</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Firebase</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>FantaCSS</p>
+                            </div>
+                        </div>
+                        <p>Caffeind is a tracking and anlyzing for all coffein in blood level and cost of coffee.s</p>
+                        <div class="project-links">
+                            <a href="/" target="_blank">Live</a>
+                            <a href="/" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img src="/1_portfolio/public/Caffeind.png" alt="caffeind-thumbnail" class="big-img" />
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <p>June 2023</p>
+                        <h4>Gopher social | A social media app service</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>Go | Chi</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Docker</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>PostgreSQL</p>
+                            </div>
+                        </div>
+                        <p>An social media app like facebook has a feature to see friends's posts with authentication and authorization with rate limit and graceful shutdown.</p>
+                        <div class="project-links">
+                            <a href="/" target="_blank">Live</a>
+                            <a href="https://github.com/ekachaikeaw/social" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img src="/1_portfolio/public/Gopher.png" alt="Gopher-social-thumbnail" class="big-img" />
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <p>June 2023</p>
+                        <h4>Subscription Tracker</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>NodeJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>ExpressJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>MongoDB</p>
+                            </div>
+                        </div>
+                        <p>A production-ready Subscription Management System with automation workflow with sending email notification renew subscription and ratelimit</p>
+                        <div class="project-links">
+                            <a href="https://subscription-tracker-dk7a.onrender.com/" target="_blank">Live</a>
+                            <a href="https://github.com/ekachaikeaw/Subscription-Tracker" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img src="/1_portfolio/public/supscription-tracker.png" alt="caffeind-thumbnail" class="big-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            By <a href="/">Eka K</a> the repo on <a href="">Github</a>
+        </p>
+    </footer>
+    <script>
+        // This is where we create the interactivity for our little color switching game
+
+        // 1. select all the html element so that we can manipulate them later
+        const body = document.querySelector('body')
+        const colorInput = document.getElementById('color-picker')
+        const colorDiv = document.querySelector('.color-div')
+        const hiddenText = document.querySelector('.color-div p')
+        const resetBtn = document.querySelector('.color-div button')
+        const playBtn = document.getElementById('play-game')
+
+        // 2. create the functions
+
+        function playGame() {
+            // this function enables the play of the game by showing the color selector input
+            colorDiv.style.display = 'block'
+            playBtn.style.display = 'none'
+        }
+
+        function changeColor() {
+            // take the users selected color on the input, and assign it to be the background color of the website
+            const selectedColor = colorInput.value
+            body.style.background = selectedColor
+            resetBtn.style.display = 'block'
+            hiddenText.style.display = 'block'
+            colorInput.style.display = 'none'
+        }
+
+        function resetColor() {
+            body.style.background = 'white'
+            colorInput.style.display = 'block'
+            playBtn.style.display = 'block'
+
+            hiddenText.style.display = 'none'
+            resetBtn.style.display = 'none'
+            colorDiv.style.display = 'none'
+        }
+        // 3. assign function to buttons by adding functions to actual elementsi(assign above)
+    </script>
+</body>
+
+</html>
